@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "role": "Admin",
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "email": "bob@example.com",
+    "role": "User",
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Carol Davis",
+    "email": "carol@example.com",
+    "role": "Moderator",
+    "active": false
+  },
+  {
+    "id": 4,
+    "name": "David Wilson",
+    "email": "david@example.com",
+    "role": "User",
+    "active": true
+  },
+  {
+    "id": 5,
+    "name": "Eva Brown",
+    "email": "eva@example.com",
+    "role": "Admin",
+    "active": true
+  }
+]

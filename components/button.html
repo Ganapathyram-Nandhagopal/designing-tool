@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons - pawabloX Design System</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo">
+            <span class="logo-pawa">pawa</span><span class="logo-blox">bloX</span>
+        </div>
+        <div></div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">
+                <div class="logo-large">
+                    <span class="logo-pawa">pawa</span><span class="logo-blox">bloX</span>
+                </div>
+                <div class="version">Design System | v1.0</div>
+            </a>
+        </div>
+
+        <div class="sidebar-content">
+            <!-- Main Navigation -->
+            <div class="nav-group">
+                <ul class="nav-menu">
+                    <li><a href="../getting-started.html"><i class="fas fa-book-open"></i> Getting Started</a></li>
+                    <li><a href="../how-to-use.html"><i class="fas fa-question-circle"></i> How to Use</a></li>
+                </ul>
+            </div>
+
+            <!-- Foundations -->
+            <div class="nav-group">
+                <div class="nav-group-header">
+                    <span>Foundations</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="nav-submenu">
+                    <li><a href="../foundations/tokens.html"><i class="fas fa-coins"></i> Tokens</a></li>
+                    <li><a href="../foundations/colors.html"><i class="fas fa-palette"></i> Colors</a></li>
+                    <li><a href="../foundations/typography.html"><i class="fas fa-font"></i> Typography</a></li>
+                    <li><a href="../foundations/iconography.html"><i class="fas fa-icons"></i> Iconography</a></li>
+                </ul>
+            </div>
+
+            <!-- Core Components -->
+            <div class="nav-group">
+                <div class="nav-group-header">
+                    <span>Core Components</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <ul class="nav-submenu">
+                    <li><a href="button.html" class="active"><i class="fas fa-square"></i> Button</a></li>
+                    <li><a href="badges.html"><i class="fas fa-tag"></i> Badges</a></li>
+                    <li><a href="checkbox.html"><i class="fas fa-check-square"></i> Checkbox</a></li>
+                    <li><a href="radio.html"><i class="fas fa-dot-circle"></i> Radio Buttons</a></li>
+                    <li><a href="input.html"><i class="fas fa-edit"></i> Input</a></li>
+                    <li><a href="alert.html"><i class="fas fa-exclamation-triangle"></i> Alert</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="copyright">© 2025 pawabloX Design System</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Header -->
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <i class="fas fa-square text-green"></i>
+                    <span>Core Components</span>
+                </div>
+                <h1>Buttons</h1>
+                <p class="page-description">
+                    A button lets the user perform an action with a tap or a click. Designed with multiple variants, states, and sizes to fit any use case in your application.
+                </p>
+            </div>
+
+            <!-- Button System Overview -->
+            <div class="card mb-6">
+                <div class="card-header">
+                    <div class="card-title">pawabloX Button System</div>
+                    <p class="card-description">Complete button design system with all variants and states</p>
+                </div>
+                <div class="card-content">
+                    <div class="button-showcase">
+                        <div class="showcase-row">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-ban"></i>
+                                BUTTON
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-ban"></i>
+                                BUTTON
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-ban"></i>
+                                BUTTON
+                            </button>
+                            <button class="btn btn-ghost">
+                                <i class="fas fa-ban"></i>
+                                BUTTON
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab-list">
+                    <button class="tab-button active" data-tab="variants">Variants</button>
+                    <button class="tab-button" data-tab="states">States</button>
+                    <button class="tab-button" data-tab="sizes">Sizes</button>
+                    <button class="tab-button" data-tab="examples">Examples</button>
+                </div>
+
+                <!-- Variants Tab -->
+                <div id="variants" class="tab-content active">
+                    <!-- Primary Buttons -->
+                    <div class="card mb-6">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div style="width: 16px; height: 16px; background-color: var(--pw-green-400); border-radius: 50%; margin-right: 8px;"></div>
+                                Primary Buttons
+                            </div>
+                            <p class="card-description">Used for the main call-to-action. Bright lime green color.</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="component-section">
+                                <h4>Default Size</h4>
+                                <div class="component-grid">
+                                    <div class="component-item">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Default</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-primary" style="background-color: var(--pw-green-500);">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Hover</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-primary loading">
+                                            BUTTON
+                                        </button>
+                                        <label>Loading</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-primary" disabled>
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Disabled</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="component-section">
+                                <h4>Icon Only</h4>
+                                <div class="component-grid">
+                                    <div class="component-item">
+                                        <button class="btn btn-primary btn-icon">
+                                            <i class="fas fa-ban"></i>
+                                        </button>
+                                        <label>Default</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-primary btn-icon" style="background-color: var(--pw-green-500);">
+                                            <i class="fas fa-ban"></i>
+                                        </button>
+                                        <label>Hover</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-primary btn-icon loading"></button>
+                                        <label>Loading</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-primary btn-icon" disabled>
+                                            <i class="fas fa-ban"></i>
+                                        </button>
+                                        <label>Disabled</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="code-example">
+                                <code>&lt;button class="btn btn-primary"&gt;&lt;i class="fas fa-ban"&gt;&lt;/i&gt; BUTTON&lt;/button&gt;</code>
+                                <button class="copy-btn" data-copy='<button class="btn btn-primary"><i class="fas fa-ban"></i> BUTTON</button>'>
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Buttons -->
+                    <div class="card mb-6">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div style="width: 16px; height: 16px; background-color: var(--pw-slate-800); border-radius: 50%; margin-right: 8px;"></div>
+                                Secondary Buttons
+                            </div>
+                            <p class="card-description">Used for secondary actions. Dark gray/black color.</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="component-section">
+                                <h4>Default Size</h4>
+                                <div class="component-grid">
+                                    <div class="component-item">
+                                        <button class="btn btn-secondary">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Default</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-secondary" style="background-color: var(--pw-slate-700);">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Hover</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-secondary loading">
+                                            BUTTON
+                                        </button>
+                                        <label>Loading</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-secondary" disabled>
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Disabled</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="code-example">
+                                <code>&lt;button class="btn btn-secondary"&gt;&lt;i class="fas fa-ban"&gt;&lt;/i&gt; BUTTON&lt;/button&gt;</code>
+                                <button class="copy-btn" data-copy='<button class="btn btn-secondary"><i class="fas fa-ban"></i> BUTTON</button>'>
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outline Buttons -->
+                    <div class="card mb-6">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div style="width: 16px; height: 16px; border: 2px solid var(--pw-slate-300); border-radius: 50%; margin-right: 8px;"></div>
+                                Outline Buttons
+                            </div>
+                            <p class="card-description">Used for less prominent actions. Outlined style.</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="component-section">
+                                <h4>Default Size</h4>
+                                <div class="component-grid">
+                                    <div class="component-item">
+                                        <button class="btn btn-outline">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Default</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-outline" style="background-color: var(--pw-slate-100);">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Hover</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-outline loading">
+                                            BUTTON
+                                        </button>
+                                        <label>Loading</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-outline" disabled>
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Disabled</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="code-example">
+                                <code>&lt;button class="btn btn-outline"&gt;&lt;i class="fas fa-ban"&gt;&lt;/i&gt; BUTTON&lt;/button&gt;</code>
+                                <button class="copy-btn" data-copy='<button class="btn btn-outline"><i class="fas fa-ban"></i> BUTTON</button>'>
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ghost Buttons -->
+                    <div class="card mb-6">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div style="width: 16px; height: 16px; border: 2px dashed var(--pw-slate-400); border-radius: 50%; margin-right: 8px;"></div>
+                                Ghost Buttons
+                            </div>
+                            <p class="card-description">Used for the least prominent actions. Minimal styling.</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="component-section">
+                                <h4>Default Size</h4>
+                                <div class="component-grid">
+                                    <div class="component-item">
+                                        <button class="btn btn-ghost">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Default</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-ghost" style="background-color: var(--pw-slate-100);">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Hover</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-ghost loading">
+                                            BUTTON
+                                        </button>
+                                        <label>Loading</label>
+                                    </div>
+                                    <div class="component-item">
+                                        <button class="btn btn-ghost" disabled>
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <label>Disabled</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="code-example">
+                                <code>&lt;button class="btn btn-ghost"&gt;&lt;i class="fas fa-ban"&gt;&lt;/i&gt; BUTTON&lt;/button&gt;</code>
+                                <button class="copy-btn" data-copy='<button class="btn btn-ghost"><i class="fas fa-ban"></i> BUTTON</button>'>
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- States Tab -->
+                <div id="states" class="tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Button States</div>
+                            <p class="card-description">Interactive states and feedback for better user experience</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="component-section">
+                                <h3>State Comparison</h3>
+                                <div class="grid grid-cols-4 gap-6">
+                                    <div class="state-column">
+                                        <h4 style="color: var(--pw-green-600);">Default</h4>
+                                        <div class="state-examples">
+                                            <button class="btn btn-primary mb-2">
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                            <button class="btn btn-secondary mb-2">
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                            <button class="btn btn-outline mb-2">
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                            <button class="btn btn-ghost">
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="state-column">
+                                        <h4 style="color: var(--pw-green-600);">Hover</h4>
+                                        <div class="state-examples">
+                                            <button class="btn btn-primary mb-2" style="background-color: var(--pw-green-500);">
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                            <button class="btn btn-secondary mb-2" style="background-color: var(--pw-slate-700);">
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                            <button class="btn btn-outline mb-2" style="background-color: var(--pw-slate-100);">
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                            <button class="btn btn-ghost" style="background-color: var(--pw-slate-100);">
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="state-column">
+                                        <h4 style="color: var(--pw-green-600);">Loading</h4>
+                                        <div class="state-examples">
+                                            <button class="btn btn-primary loading mb-2">BUTTON</button>
+                                            <button class="btn btn-secondary loading mb-2">BUTTON</button>
+                                            <button class="btn btn-outline loading mb-2">BUTTON</button>
+                                            <button class="btn btn-ghost loading">BUTTON</button>
+                                        </div>
+                                    </div>
+                                    <div class="state-column">
+                                        <h4 style="color: var(--pw-green-600);">Disabled</h4>
+                                        <div class="state-examples">
+                                            <button class="btn btn-primary mb-2" disabled>
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                            <button class="btn btn-secondary mb-2" disabled>
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                            <button class="btn btn-outline mb-2" disabled>
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                            <button class="btn btn-ghost" disabled>
+                                                <i class="fas fa-ban"></i>
+                                                BUTTON
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sizes Tab -->
+                <div id="sizes" class="tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Button Sizes</div>
+                            <p class="card-description">Different sizes for various contexts and screen sizes</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="component-section">
+                                <h3>Size Comparison</h3>
+                                <div class="size-comparison">
+                                    <div class="size-item">
+                                        <button class="btn btn-primary btn-sm">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <span class="size-label">Small (32px)</span>
+                                    </div>
+                                    <div class="size-item">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <span class="size-label">Default (40px)</span>
+                                    </div>
+                                    <div class="size-item">
+                                        <button class="btn btn-primary btn-lg">
+                                            <i class="fas fa-ban"></i>
+                                            BUTTON
+                                        </button>
+                                        <span class="size-label">Large (48px)</span>
+                                    </div>
+                                    <div class="size-item">
+                                        <button class="btn btn-primary btn-icon">
+                                            <i class="fas fa-ban"></i>
+                                        </button>
+                                        <span class="size-label">Icon (40px)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Examples Tab -->
+                <div id="examples" class="tab-content">
+                    <div class="card mb-6">
+                        <div class="card-header">
+                            <div class="card-title">Real-world Examples</div>
+                            <p class="card-description">Common button patterns and combinations used in applications</p>
+                        </div>
+                        <div class="card-content">
+                            <div class="component-section">
+                                <h3>Form Actions</h3>
+                                <div class="example-container">
+                                    <div class="form-group">
+                                        <label class="form-label">Email Address</label>
+                                        <input type="email" class="form-input" placeholder="Enter your email">
+                                    </div>
+                                    <div class="button-group">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-paper-plane"></i>
+                                            Submit
+                                        </button>
+                                        <button class="btn btn-outline">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="component-section">
+                                <h3>Card Actions</h3>
+                                <div class="example-container">
+                                    <div class="example-card">
+                                        <h4>Project Alpha</h4>
+                                        <p>A comprehensive design system for modern applications</p>
+                                        <div class="card-actions">
+                                            <div class="action-group">
+                                                <button class="btn btn-ghost btn-sm">
+                                                    <i class="fas fa-heart"></i>
+                                                    Like
+                                                </button>
+                                                <button class="btn btn-ghost btn-sm">
+                                                    <i class="fas fa-star"></i>
+                                                    Star
+                                                </button>
+                                            </div>
+                                            <div class="action-group">
+                                                <button class="btn btn-outline btn-sm">
+                                                    <i class="fas fa-edit"></i>
+                                                    Edit
+                                                </button>
+                                                <button class="btn btn-primary btn-sm">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                    View
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="../js/main.js"></script>
+    <style>
+        .page-header {
+            margin-bottom: var(--spacing-8);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-2);
+            font-size: var(--font-size-sm);
+            color: var(--pw-slate-500);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .page-description {
+            font-size: var(--font-size-xl);
+            color: var(--pw-slate-600);
+            max-width: 800px;
+            margin-top: var(--spacing-4);
+        }
+
+        .button-showcase {
+            padding: var(--spacing-6);
+            background: var(--pw-slate-100);
+            border-radius: var(--radius-lg);
+        }
+
+        .showcase-row {
+            display: flex;
+            gap: var(--spacing-4);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .component-section {
+            margin-bottom: var(--spacing-8);
+        }
+
+        .component-section h4 {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--pw-slate-700);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: var(--spacing-4);
+            margin-bottom: var(--spacing-6);
+        }
+
+        .component-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-2);
+        }
+
+        .component-item label {
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+            color: var(--pw-slate-900);
+        }
+
+        .code-example {
+            background: var(--pw-slate-100);
+            padding: var(--spacing-4);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Courier New', monospace;
+            font-size: var(--font-size-sm);
+        }
+
+        .copy-btn {
+            background: none;
+            border: none;
+            color: var(--pw-slate-600);
+            cursor: pointer;
+            padding: var(--spacing-2);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--pw-slate-200);
+            color: var(--pw-slate-900);
+        }
+
+        .copy-btn.copied {
+            color: var(--pw-green-600);
+        }
+
+        .state-column {
+            text-align: center;
+        }
+
+        .state-column h4 {
+            margin-bottom: var(--spacing-4);
+            font-weight: 600;
+        }
+
+        .state-examples {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-2);
+        }
+
+        .size-comparison {
+            display: flex;
+            align-items: end;
+            gap: var(--spacing-6);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .size-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-2);
+        }
+
+        .size-label {
+            font-size: var(--font-size-xs);
+            color: var(--pw-slate-500);
+        }
+
+        .example-container {
+            padding: var(--spacing-4);
+            border: 1px solid var(--pw-slate-200);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .button-group {
+            display: flex;
+            gap: var(--spacing-2);
+        }
+
+        .example-card {
+            background: var(--pw-slate-50);
+            padding: var(--spacing-4);
+            border-radius: var(--radius-lg);
+        }
+
+        .example-card h4 {
+            font-weight: 600;
+            margin-bottom: var(--spacing-2);
+        }
+
+        .example-card p {
+            font-size: var(--font-size-sm);
+            color: var(--pw-slate-600);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .action-group {
+            display: flex;
+            gap: var(--spacing-2);
+        }
+
+        @media (max-width: 768px) {
+            .showcase-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .component-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .size-comparison {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card-actions {
+                flex-direction: column;
+                gap: var(--spacing-4);
+                align-items: stretch;
+            }
+
+            .action-group {
+                justify-content: center;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,421 @@
+/* CSS Custom Properties (Design Tokens) */
+:root {
+  /* pw-green colors */
+  --pw-green-50: #F5FEE4;
+  --pw-green-100: #ECFCCB;
+  --pw-green-200: #DDFAA5;
+  --pw-green-300: #C8F769;
+  --pw-green-400: #B2F42C;
+  --pw-green-500: #9CE800;
+  --pw-green-600: #8DC63F;
+  --pw-green-700: #76AC08;
+  --pw-green-800: #5B8506;
+  --pw-green-900: #3D5904;
+
+  /* pw-slate colors */
+  --pw-slate-50: #FFFFFF;
+  --pw-slate-100: #F2F2F3;
+  --pw-slate-200: #E4E6E7;
+  --pw-slate-300: #CACDCE;
+  --pw-slate-400: #AAAEB0;
+  --pw-slate-500: #7A8185;
+  --pw-slate-600: #484F52;
+  --pw-slate-700: #2F3437;
+  --pw-slate-800: #252A2D;
+  --pw-slate-900: #171A1C;
+
+  /* pw-orange colors */
+  --pw-orange-50: #FFF5E6;
+  --pw-orange-100: #FFE3BF;
+  --pw-orange-200: #FFCD94;
+  --pw-orange-300: #FFB366;
+  --pw-orange-400: #FF9940;
+  --pw-orange-500: #FF7A00;
+  --pw-orange-600: #CC6200;
+  --pw-orange-700: #994900;
+  --pw-orange-800: #813D00;
+  --pw-orange-900: #633000;
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+
+  /* Typography */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Layout */
+  --sidebar-width: 280px;
+  --mobile-header-height: 64px;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--pw-slate-900);
+  background-color: var(--pw-slate-50);
+}
+
+/* Layout */
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--mobile-header-height);
+  background: var(--pw-slate-50);
+  border-bottom: 1px solid var(--pw-slate-200);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-4);
+  z-index: 1000;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: var(--font-size-lg);
+  color: var(--pw-slate-600);
+  cursor: pointer;
+  padding: var(--spacing-2);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: var(--pw-slate-50);
+  border-right: 1px solid var(--pw-slate-200);
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+  padding: var(--spacing-6) var(--spacing-4);
+  border-bottom: 1px solid var(--pw-slate-200);
+}
+
+.sidebar-logo {
+  text-decoration: none;
+  display: block;
+}
+
+.logo, .logo-large {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.logo {
+  font-size: var(--font-size-sm);
+}
+
+.logo-large {
+  font-size: var(--font-size-2xl);
+}
+
+.logo-pawa {
+  color: var(--pw-green-500);
+}
+
+.logo-blox {
+  color: var(--pw-slate-900);
+}
+
+.version {
+  font-size: var(--font-size-xs);
+  color: var(--pw-slate-500);
+  margin-top: var(--spacing-1);
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-4) 0;
+}
+
+.nav-group {
+  margin-bottom: var(--spacing-6);
+}
+
+.nav-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--pw-slate-700);
+  cursor: pointer;
+}
+
+.nav-group-header i {
+  transition: transform 0.2s ease;
+}
+
+.nav-group.open .nav-group-header i {
+  transform: rotate(90deg);
+}
+
+.nav-menu, .nav-submenu {
+  list-style: none;
+}
+
+.nav-menu li, .nav-submenu li {
+  margin: 0;
+}
+
+.nav-menu a, .nav-submenu a {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  color: var(--pw-slate-600);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: all 0.2s ease;
+}
+
+.nav-submenu a {
+  padding-left: var(--spacing-6);
+}
+
+.nav-menu a:hover, .nav-submenu a:hover {
+  background-color: var(--pw-slate-100);
+  color: var(--pw-slate-900);
+}
+
+.nav-menu a.active, .nav-submenu a.active {
+  background-color: var(--pw-green-100);
+  color: var(--pw-green-700);
+}
+
+.nav-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.nav-group.open .nav-submenu {
+  max-height: 500px;
+}
+
+.sidebar-footer {
+  padding: var(--spacing-4);
+  border-top: 1px solid var(--pw-slate-200);
+}
+
+.copyright {
+  font-size: var(--font-size-xs);
+  color: var(--pw-slate-500);
+}
+
+.main-content {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  background: var(--pw-slate-50);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-6);
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: var(--spacing-12) 0;
+}
+
+.hero-logo {
+  margin-bottom: var(--spacing-6);
+}
+
+.hero-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: var(--spacing-2);
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--pw-slate-500);
+}
+
+.hero-description {
+  font-size: var(--font-size-xl);
+  color: var(--pw-slate-600);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-8);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Quick Access */
+.quick-access {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-12);
+}
+
+/* Getting Started Section */
+.getting-started-section {
+  background: var(--pw-slate-100);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  text-align: center;
+}
+
+.getting-started-section h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-4);
+}
+
+.getting-started-section p {
+  color: var(--pw-slate-600);
+  margin-bottom: var(--spacing-6);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.getting-started-actions {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Utility Classes */
+.text-green {
+  color: var(--pw-green-600);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.hover-card {
+  transition: all 0.2s ease;
+}
+
+.hover-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-top: var(--mobile-header-height);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quick-access {
+    grid-template-columns: 1fr;
+  }
+
+  .getting-started-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-4);
+  }
+
+  .hero-section {
+    padding: var(--spacing-8) 0;
+  }
+
+  .getting-started-section {
+    padding: var(--spacing-6);
+  }
+}
